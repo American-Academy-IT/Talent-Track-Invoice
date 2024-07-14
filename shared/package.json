@@ -1,0 +1,13 @@
+{
+  "name": "@invoice-system/shared",
+  "main": "index.ts",
+  "scripts": {
+    "build": "npm i && tsc"
+  },
+  "dependencies": {
+    "date-fns": "^2.29.3"
+  },
+  "devDependencies": {
+    "typescript": "^4.7.4"
+  }
+}
