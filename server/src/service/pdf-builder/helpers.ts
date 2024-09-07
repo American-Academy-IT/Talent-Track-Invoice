@@ -18,15 +18,15 @@ const toArabic = (word: string) => {
 const getIBAN = (method: string, currency: string) => {
   if (method === 'WIO') {
     if (currency === 'AED') {
-      return 'EG630010015000000100045941347';
+      return 'AE970860000009142778526';
     } else {
-      return 'EG350010015000000100045941366';
+      return 'AE970860000009142778526';
     }
   } else {
     if (currency === 'USD') {
-      return 'EG45003701932031807890429';
+      return 'AE970860000009142778526';
     } else {
-      return 'EG45003701932031819745575';
+      return 'AE970860000009142778526';
     }
   }
 };
@@ -75,7 +75,7 @@ const getBankName = (method: string) => {
 const getBankAccountName = (method: string) => {
   switch (method) {
     case 'WIO':
-      return 'Talent Track FOR TRAINING';
+      return 'TALENTTRACK - FZCO';
     default:
       return '';
   }
@@ -84,9 +84,9 @@ const getBankAccountName = (method: string) => {
 const getSwiftCode = (method: string) => {
   switch (method) {
     case 'Wio':
-      return 'CIBEEGXXXX';
+      return 'WIOBAEADXXX';
     default:
-      return '';
+      return 'WIOBAEADXXX';
   }
 };
 
@@ -110,7 +110,7 @@ const drawPaymentInfo = (doc: PDFKit.PDFDocument, method: string, currency: stri
 
   doc.text(`Payment Method: ${method === 'CASH' ? 'CASH PAYMENT' : 'BANK TRANSFER'}`);
   if (method !== 'CASH') drawBankInfo(doc, method, currency);
-  doc.text('Remit Address: Dubai UAE');
+  doc.text('Remit Address: Dubai Silicon Oasis, Dubai, United Arab Emirates');
 };
 
 export { MARGIN_TOP, isEnglish, toArabic, getIBAN, drawLayout, drawBankInfo, drawPaymentInfo };

@@ -50,7 +50,7 @@ const validateMobile = (mobile: string) => {
 };
 
 const validateCurrency = (currency: string) => {
-  if (!['AED', 'USD'].includes(currency.toUpperCase())) {
+  if (!['AED'].includes(currency.toUpperCase())) {
     return 'Invalid currency';
   }
 };

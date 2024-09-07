@@ -128,7 +128,7 @@ const CreateOutcomePage = () => {
                       placeholder="select an option"
                       options={[
                         { key: 'AED', value: 'AED' },
-                        { key: 'USD', value: 'USD' },
+                        // { key: 'USD', value: 'USD' },
                       ]}
                     />
                   )}
